@@ -1,0 +1,260 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="theme-color" content="#0A1629">
+<meta name="description" content="AKUH Private Wing — premium healthcare services, specialist care and modern facilities.">
+<title>AKUH Private Wing | World-Class Care, Close to Home</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Inter:wght@400;500;600;700&family=Montserrat:wght@500;600;700&family=Playfair+Display:wght@500;600;700&display=swap" rel="stylesheet">
+<style>
+:root{
+ --deep-base:#0A1629;--navy-dark:#0F2744;--sapphire-primary:#1E5AF7;
+ --teal-accent:#00D4C9;--gold-warm:#D4AF37;--gold-soft:#F2D166;
+ --text-white:#fff;--text-soft:#C9D6E8;--glass-bg:rgba(30,90,247,.08);
+ --card-border:rgba(0,212,201,.15);--radius:24px;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:Inter,DM Sans,sans-serif;background:var(--deep-base);color:var(--text-white);line-height:1.7;overflow-x:hidden}
+body:before{content:"";position:fixed;inset:0;pointer-events:none;background:
+ radial-gradient(circle at 82% 12%,rgba(30,90,247,.16),transparent 27%),
+ radial-gradient(circle at 15% 70%,rgba(0,212,201,.06),transparent 25%);z-index:-2}
+a{text-decoration:none;color:inherit}
+button,input,select,textarea{font:inherit}
+.container{width:min(1160px,92%);margin:auto}
+.section{padding:105px 0;position:relative}
+.section-head{text-align:center;max-width:720px;margin:0 auto 52px}
+.eyebrow{font:Montserrat,sans-serif;color:var(--gold-soft);font-size:.72rem;letter-spacing:2.3px;text-transform:uppercase;font-weight:700}
+.section-head h2{font:600 clamp(2rem,4vw,3.3rem) "Playfair Display",serif;margin:9px 0 13px}
+.section-head p{color:var(--text-soft)}
+.gold-line{width:58px;height:2px;margin:17px auto 0;background:linear-gradient(90deg,var(--gold-warm),var(--gold-soft));box-shadow:0 0 16px rgba(212,175,55,.45)}
+header{position:fixed;top:14px;left:50%;transform:translateX(-50%);width:min(1200px,94%);z-index:1000;background:rgba(10,22,41,.72);border:1px solid rgba(255,255,255,.08);backdrop-filter:blur(15px);-webkit-backdrop-filter:blur(15px);border-radius:18px;transition:.4s}
+header.scrolled{top:7px;box-shadow:0 15px 45px rgba(0,0,0,.28);transform:translateX(-50%) scale(.985)}
+.nav{height:74px;display:flex;align-items:center;justify-content:space-between;padding:0 20px}
+.brand{font:600 1.08rem "Playfair Display",serif;white-space:nowrap}.brand span{color:var(--gold-soft)}
+.navlinks{display:flex;gap:22px;align-items:center;margin-left:20px}.navlinks a{font-size:.78rem;color:#dce7f5;transition:.3s}.navlinks a:hover{color:var(--teal-accent)}
+.actions{display:flex;align-items:center;gap:13px}
+.btn{display:inline-flex;align-items:center;justify-content:center;gap:8px;border:0;cursor:pointer;padding:13px 21px;border-radius:999px;font-family:Montserrat,sans-serif;font-size:.72rem;font-weight:700;transition:.35s}
+.btn-gold{color:#10151e;background:linear-gradient(135deg,var(--gold-soft),var(--gold-warm));box-shadow:0 7px 25px rgba(212,175,55,.18)}
+.btn-gold:hover{transform:scale(1.03);box-shadow:0 0 28px rgba(242,209,102,.4)}
+.emergency{font-size:.72rem;font-weight:700;color:#fff;white-space:nowrap}.emergency b{color:var(--gold-soft)}
+.menu-btn{display:none;background:none;border:1px solid rgba(255,255,255,.12);color:#fff;width:43px;height:43px;border-radius:12px}
+.hero{min-height:100vh;display:grid;align-items:center;padding:145px 0 80px;position:relative;overflow:hidden}
+.hero:before{content:"";position:absolute;width:760px;height:760px;right:-260px;top:-180px;border-radius:50%;background:radial-gradient(circle,rgba(30,90,247,.3),rgba(0,212,201,.08) 35%,transparent 67%);filter:blur(8px);animation:pulse 8s ease-in-out infinite}
+.hero:after{content:"";position:absolute;left:30%;bottom:-250px;width:700px;height:400px;background:radial-gradient(ellipse,rgba(212,175,55,.09),transparent 70%);filter:blur(15px)}
+.hero-grid{display:grid;grid-template-columns:1.04fr .96fr;gap:55px;align-items:center;position:relative;z-index:2}
+.badge{display:inline-flex;border:1px solid rgba(212,175,55,.42);color:var(--gold-soft);padding:8px 13px;border-radius:999px;font:600 .66rem Montserrat,sans-serif;letter-spacing:1.5px;text-transform:uppercase;background:rgba(212,175,55,.04)}
+.hero h1{font:600 clamp(3rem,6.5vw,5.9rem)/1.02 "Playfair Display",serif;letter-spacing:-1.8px;margin:20px 0}
+.hero h1 span{background:linear-gradient(100deg,#fff 15%,#9eece6 75%);-webkit-background-clip:text;background-clip:text;color:transparent}
+.hero-sub{font:600 1.02rem Inter,sans-serif;color:#86e9e3;margin-bottom:13px}
+.hero-copy{color:var(--text-soft);max-width:610px;font-size:1rem}
+.hero-buttons{display:flex;gap:12px;flex-wrap:wrap;margin-top:29px}
+.btn-outline{border:1px solid rgba(0,212,201,.48);color:#bafaf5;background:rgba(0,212,201,.04)}
+.btn-outline:hover{background:var(--teal-accent);color:#07151d;transform:scale(1.03)}
+.visual{min-height:560px;position:relative;border-radius:34px;overflow:hidden;border:1px solid rgba(255,255,255,.1);background:
+linear-gradient(140deg,rgba(0,212,201,.05),rgba(10,22,41,.2)),
+url("https://images.unsplash.com/photo-1519494026892-80bbd2d6fd0d?auto=format&fit=crop&w=1100&q=82") center/cover}
+.visual:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(10,22,41,.05),rgba(10,22,41,.72));}
+.visual-caption{position:absolute;z-index:2;left:25px;bottom:25px;right:25px;padding:21px;border:1px solid rgba(255,255,255,.13);background:rgba(10,22,41,.48);backdrop-filter:blur(12px);border-radius:20px}
+.visual-caption strong{font:600 1.3rem "Playfair Display",serif}.visual-caption p{color:#d0deee;font-size:.82rem;margin-top:3px}
+.float-card{position:absolute;z-index:3;background:rgba(10,22,41,.72);border:1px solid rgba(0,212,201,.22);backdrop-filter:blur(13px);padding:13px 15px;border-radius:16px;box-shadow:0 15px 40px rgba(0,0,0,.28);animation:float 5s ease-in-out infinite}
+.float-card b{display:block;font-size:.88rem}.float-card small{color:#b7c8dc;font-size:.68rem}.f1{top:40px;right:-12px}.f2{left:-16px;top:44%}.f3{right:20px;bottom:112px;animation-delay:1.2s}
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.card{background:linear-gradient(145deg,rgba(30,90,247,.09),rgba(10,22,41,.58));border:1px solid var(--card-border);border-radius:var(--radius);padding:28px;transition:.4s;position:relative;overflow:hidden}
+.card:before{content:"";position:absolute;width:130px;height:130px;right:-55px;top:-55px;border-radius:50%;background:rgba(0,212,201,.08);filter:blur(5px)}
+.card:hover{transform:translateY(-6px);border-color:rgba(0,212,201,.4);box-shadow:0 20px 55px rgba(0,0,0,.25),0 0 25px rgba(0,212,201,.06)}
+.icon{width:50px;height:50px;border-radius:15px;display:grid;place-items:center;color:var(--teal-accent);border:1px solid rgba(0,212,201,.18);background:rgba(0,212,201,.07);font-size:1.35rem;margin-bottom:19px}
+.card h3{font:600 1.35rem "Playfair Display",serif;margin-bottom:7px}.card p{font-size:.86rem;color:var(--text-soft);margin-bottom:17px}.learn{color:#7de9e2;font:600 .75rem Montserrat,sans-serif}
+.split{display:grid;grid-template-columns:1fr 1fr;gap:70px;align-items:center}
+.about-img{min-height:570px;border-radius:30px;background:url("https://images.unsplash.com/photo-1538108149393-fbbd81895907?auto=format&fit=crop&w=1000&q=82") center/cover;border:1px solid rgba(255,255,255,.09);position:relative;overflow:hidden}
+.about-img:after{content:"";position:absolute;inset:0;background:linear-gradient(135deg,rgba(0,212,201,.08),rgba(10,22,41,.5))}
+.content h2{font:600 clamp(2.1rem,4vw,3.4rem)/1.1 "Playfair Display",serif;margin:9px 0 17px}.content>p{color:var(--text-soft)}
+.features{display:grid;grid-template-columns:1fr 1fr;gap:14px;margin-top:27px}
+.feature{display:flex;gap:11px;align-items:flex-start;font-size:.82rem;color:#dbe7f4}.check{color:var(--teal-accent);font-size:1rem}
+.alt{background:linear-gradient(180deg,transparent,rgba(15,39,68,.28),transparent)}
+.facilities{display:grid;grid-template-columns:repeat(4,1fr);gap:15px}.facility{padding:25px 18px;text-align:center;min-height:145px}.facility .icon{margin:0 auto 13px;width:45px;height:45px}.facility h3{font-size:1rem}.facility p{font-size:.72rem}
+.doctors{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.doctor{text-align:center}.doctor-img{width:105px;height:105px;border-radius:50%;margin:0 auto 16px;border:2px solid rgba(212,175,55,.65);padding:4px}.doctor-img img{width:100%;height:100%;object-fit:cover;border-radius:50%}.doctor h3{font:600 1.22rem "Playfair Display",serif}.doctor p{color:#8de7e1;font-size:.74rem;margin:2px 0 10px}.doctor .bio{color:var(--text-soft);font-size:.78rem;margin-bottom:16px}
+.testimonials{display:flex;gap:18px;overflow-x:auto;scroll-snap-type:x mandatory;padding:4px 2px 15px}.quote{min-width:330px;flex:1;scroll-snap-align:start}.stars{color:var(--gold-soft);letter-spacing:3px;font-size:.78rem;margin-bottom:14px}.quote p{color:#d5e0ec;font-size:.88rem}.patient{display:flex;align-items:center;gap:10px;margin-top:18px}.avatar{width:37px;height:37px;border-radius:50%;display:grid;place-items:center;background:linear-gradient(135deg,#1e5af7,#00d4c9);font-weight:700;font-size:.75rem}.patient small{color:#8fa5bd}
+.contact-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:22px}.contact-panel,.form-panel{padding:34px;border-radius:28px;background:linear-gradient(145deg,rgba(30,90,247,.1),rgba(10,22,41,.6));border:1px solid var(--card-border)}
+.contact-list{display:grid;gap:18px;margin-top:27px}.contact-item{display:flex;gap:13px}.contact-item .mini{color:var(--teal-accent);font-size:1.05rem}.contact-item b{display:block;font-size:.77rem;color:#fff}.contact-item span{font-size:.79rem;color:var(--text-soft)}
+.emergency-box{margin-top:25px;padding:17px;border-radius:16px;background:rgba(212,175,55,.08);border:1px solid rgba(212,175,55,.3)}.emergency-box small{color:var(--gold-soft);text-transform:uppercase;letter-spacing:1px}.emergency-box strong{display:block;font-size:1.35rem;margin-top:2px}
+.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:14px}.field{display:grid;gap:6px}.field.full{grid-column:1/-1}.field label{font:600 .66rem Montserrat,sans-serif;color:#b7c9dd;text-transform:uppercase;letter-spacing:.7px}.field input,.field select,.field textarea{width:100%;border:1px solid rgba(255,255,255,.1);background:rgba(0,0,0,.16);color:#fff;border-radius:13px;padding:13px 14px;outline:none;transition:.3s}.field input:focus,.field select:focus,.field textarea:focus{border-color:rgba(0,212,201,.55);box-shadow:0 0 0 3px rgba(0,212,201,.06)}.field textarea{min-height:115px;resize:vertical}.field select option{background:#0f2744}.form-panel .btn{width:100%;margin-top:16px}
+footer{border-top:1px solid rgba(255,255,255,.07);padding:65px 0 20px;background:#081322}.footer-grid{display:grid;grid-template-columns:1.3fr 1fr 1fr 1fr;gap:35px}.footer h4{font:600 1rem "Playfair Display",serif;margin-bottom:15px}.footer p,.footer a{color:#94a8be;font-size:.76rem}.footer a{display:block;margin:8px 0;transition:.3s}.footer a:hover{color:#fff}.socials{display:flex;gap:8px;margin-top:14px}.socials a{width:34px;height:34px;border:1px solid rgba(255,255,255,.1);border-radius:10px;display:grid;place-items:center;color:#d9e5f2;margin:0}.bottom{border-top:1px solid rgba(255,255,255,.06);margin-top:45px;padding-top:17px;display:flex;justify-content:space-between;color:#667b93;font-size:.67rem}
+.reveal{opacity:0;transform:translateY(24px);transition:opacity .75s ease,transform .75s ease}.reveal.show{opacity:1;transform:none}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-10px)}}@keyframes pulse{0%,100%{transform:scale(1);opacity:.7}50%{transform:scale(1.08);opacity:1}}
+@media(max-width:1050px){.navlinks{gap:13px}.navlinks a{font-size:.7rem}.emergency{display:none}.hero-grid{gap:35px}.cards{grid-template-columns:repeat(2,1fr)}.facilities{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:800px){header{top:8px}.nav{height:65px}.menu-btn{display:block}.navlinks{position:fixed;top:72px;right:0;width:min(330px,88vw);height:calc(100vh - 82px);padding:28px;background:rgba(8,19,34,.97);border:1px solid rgba(255,255,255,.08);border-radius:20px 0 0 20px;display:flex;flex-direction:column;align-items:flex-start;gap:0;transform:translateX(110%);transition:.4s}.navlinks.open{transform:translateX(0)}.navlinks a{width:100%;padding:15px 4px;font-size:.8rem;border-bottom:1px solid rgba(255,255,255,.05)}.actions .btn{display:none}.hero{padding-top:125px}.hero-grid,.split,.contact-grid{grid-template-columns:1fr}.hero h1{font-size:clamp(2.8rem,12vw,4.6rem)}.visual{min-height:480px}.split{gap:35px}.about-img{min-height:400px}.doctors{grid-template-columns:1fr 1fr}.footer-grid{grid-template-columns:1fr 1fr}.bottom{flex-direction:column;gap:7px}}
+@media(max-width:560px){.section{padding:78px 0}.cards,.features,.form-grid,.doctors{grid-template-columns:1fr}.facilities{grid-template-columns:1fr 1fr}.facility{min-height:125px}.visual{min-height:430px}.f1{right:10px}.f2{left:10px}.f3{right:10px;bottom:100px}.contact-panel,.form-panel{padding:24px}.footer-grid{grid-template-columns:1fr}.bottom{font-size:.62rem}.brand{font-size:.98rem}}
+</style>
+</head>
+<body>
+<header id="header">
+<nav class="nav">
+<a class="brand" href="#home">AKUH <span>Private Wing</span></a>
+<div class="navlinks" id="navlinks">
+<a href="#home">Home</a><a href="#about">About</a><a href="#services">Services</a><a href="#specialties">Specialties</a><a href="#doctors">Doctors</a><a href="#facilities">Facilities</a><a href="#contact">Contact</a>
+</div>
+<div class="actions"><span class="emergency">Emergency: <b>1122</b></span><a class="btn btn-gold" href="#contact">Book Appointment</a><button class="menu-btn" id="menuBtn" aria-label="Open menu">☰</button></div>
+</nav>
+</header>
+
+<main>
+<section class="hero" id="home">
+<div class="container hero-grid">
+<div class="reveal">
+<span class="badge">Premium Healthcare Services</span>
+<h1>World-Class Care,<br><span>Close to Home.</span></h1>
+<p class="hero-sub">AKUH Private Wing — Compassionate Excellence in Every Detail</p>
+<p class="hero-copy">Experience premium private healthcare with expert specialists, advanced facilities, and personalized care — right here in Pakistan.</p>
+<div class="hero-buttons"><a class="btn btn-gold" href="#contact">Book Appointment →</a><a class="btn btn-outline" href="#services">View Services</a></div>
+</div>
+<div class="visual reveal">
+<div class="float-card f1"><b>24/7 Care</b><small>Support when you need it</small></div>
+<div class="float-card f2"><b>Expert Specialists</b><small>Dedicated clinical expertise</small></div>
+<div class="float-card f3"><b>Modern Facilities</b><small>Comfort-led environment</small></div>
+<div class="visual-caption"><strong>Care designed around you.</strong><p>Calm spaces, attentive teams and a premium patient experience.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="services">
+<div class="container">
+<div class="section-head reveal"><span class="eyebrow">Clinical Excellence</span><h2>Our Specialties</h2><p>Expert-led care across essential medical specialties, delivered with precision, empathy and attention to every detail.</p><div class="gold-line"></div></div>
+<div class="cards" id="specialties">
+<div class="card reveal"><div class="icon">♥</div><h3>Cardiology</h3><p>Comprehensive heart care with modern diagnostic and treatment pathways.</p><a class="learn" href="#contact">Learn More →</a></div>
+<div class="card reveal"><div class="icon">✦</div><h3>Orthopedics</h3><p>Specialist assessment and treatment for bones, joints and mobility.</p><a class="learn" href="#contact">Learn More →</a></div>
+<div class="card reveal"><div class="icon">✚</div><h3>Gynecology</h3><p>Personalized women's health services in a calm, respectful setting.</p><a class="learn" href="#contact">Learn More →</a></div>
+<div class="card reveal"><div class="icon">⌁</div><h3>Pediatrics</h3><p>Gentle, family-focused medical care for children and young patients.</p><a class="learn" href="#contact">Learn More →</a></div>
+<div class="card reveal"><div class="icon">◇</div><h3>General Surgery</h3><p>Planned and urgent surgical care supported by modern operating facilities.</p><a class="learn" href="#contact">Learn More →</a></div>
+<div class="card reveal"><div class="icon">＋</div><h3>Internal Medicine</h3><p>Whole-person assessment for complex and everyday adult health needs.</p><a class="learn" href="#contact">Learn More →</a></div>
+</div>
+</div>
+</section>
+
+<section class="section alt" id="about">
+<div class="container split">
+<div class="about-img reveal"></div>
+<div class="content reveal"><span class="eyebrow">The Private Experience</span><h2>Why Choose AKUH Private Wing?</h2><p>A premium environment where clinical expertise meets thoughtful hospitality. Every part of the experience is designed to make care feel more personal, calm and connected.</p>
+<div class="features">
+<div class="feature"><span class="check">✓</span>Expert & Experienced Specialists</div><div class="feature"><span class="check">✓</span>Advanced Medical Technology</div>
+<div class="feature"><span class="check">✓</span>Comfortable Private Rooms</div><div class="feature"><span class="check">✓</span>Compassionate Nursing Staff</div>
+<div class="feature"><span class="check">✓</span>24/7 Emergency & Support</div><div class="feature"><span class="check">✓</span>Premium Care Packages</div>
+</div></div>
+</div>
+</section>
+
+<section class="section" id="facilities">
+<div class="container">
+<div class="section-head reveal"><span class="eyebrow">Comfort & Capability</span><h2>Our Facilities</h2><p>Modern clinical infrastructure paired with thoughtful amenities for patients and families.</p><div class="gold-line"></div></div>
+<div class="facilities">
+<div class="card facility reveal"><div class="icon">▣</div><h3>Private Rooms</h3><p>Quiet, comfortable patient spaces.</p></div>
+<div class="card facility reveal"><div class="icon">✚</div><h3>ICU & CCU</h3><p>Specialized critical care environment.</p></div>
+<div class="card facility reveal"><div class="icon">◈</div><h3>Operating Theaters</h3><p>Modern surgical infrastructure.</p></div>
+<div class="card facility reveal"><div class="icon">⌬</div><h3>Diagnostic Lab</h3><p>Reliable diagnostic support.</p></div>
+<div class="card facility reveal"><div class="icon">+</div><h3>Pharmacy</h3><p>Convenient medication support.</p></div>
+<div class="card facility reveal"><div class="icon">◇</div><h3>Cafeteria</h3><p>Comfortable dining options.</p></div>
+<div class="card facility reveal"><div class="icon">⌁</div><h3>Free Wi-Fi</h3><p>Stay connected with ease.</p></div>
+<div class="card facility reveal"><div class="icon">P</div><h3>Valet Parking</h3><p>Convenient arrival and departure.</p></div>
+</div>
+</div>
+</section>
+
+<section class="section alt" id="doctors">
+<div class="container">
+<div class="section-head reveal"><span class="eyebrow">Meet the Team</span><h2>Our Specialists</h2><p>Experienced clinicians committed to clear communication, careful diagnosis and compassionate treatment.</p><div class="gold-line"></div></div>
+<div class="doctors">
+<div class="card doctor reveal"><div class="doctor-img"><img src="https://images.unsplash.com/photo-1612349317150-e413f6a5b16d?auto=format&fit=crop&w=250&q=80" alt="Specialist doctor"></div><h3>Dr. Amina Rahman</h3><p>Consultant Cardiologist</p><div class="bio">Focused on comprehensive cardiovascular assessment and patient-centered care.</div><a class="btn btn-gold" href="#contact">Book Appointment</a></div>
+<div class="card doctor reveal"><div class="doctor-img"><img src="https://images.unsplash.com/photo-1559839734-2b71ea197ec2?auto=format&fit=crop&w=250&q=80" alt="Specialist doctor"></div><h3>Dr. Sara Malik</h3><p>Consultant Gynecologist</p><div class="bio">Providing respectful, personalized women's health consultations and support.</div><a class="btn btn-gold" href="#contact">Book Appointment</a></div>
+<div class="card doctor reveal"><div class="doctor-img"><img src="https://images.unsplash.com/photo-1618498082410-b4aa22193b38?auto=format&fit=crop&w=250&q=80" alt="Specialist doctor"></div><h3>Dr. Hamza Ahmed</h3><p>Consultant Orthopedic Surgeon</p><div class="bio">Dedicated to restoring mobility through thoughtful assessment and modern care.</div><a class="btn btn-gold" href="#contact">Book Appointment</a></div>
+</div>
+</div>
+</section>
+
+<section class="section" id="testimonials">
+<div class="container">
+<div class="section-head reveal"><span class="eyebrow">Patient Experience</span><h2>What Our Patients Say</h2><p>Stories of attentive service, clear communication and a more comfortable healthcare journey.</p><div class="gold-line"></div></div>
+<div class="testimonials">
+<div class="card quote reveal"><div class="stars">★★★★★</div><p>“The team made every step feel organized and reassuring. The environment was calm, private and beautifully maintained.”</p><div class="patient"><div class="avatar">SA</div><div><b>Sarah A.</b><small>Lahore</small></div></div></div>
+<div class="card quote reveal"><div class="stars">★★★★★</div><p>“I appreciated how clearly everything was explained. The staff were attentive without making the experience feel overwhelming.”</p><div class="patient"><div class="avatar">MK</div><div><b>M. Khan</b><small>Karachi</small></div></div></div>
+<div class="card quote reveal"><div class="stars">★★★★★</div><p>“A premium healthcare experience with genuine warmth. From reception to consultation, the service felt thoughtful.”</p><div class="patient"><div class="avatar">FA</div><div><b>F. Ahmed</b><small>Islamabad</small></div></div></div>
+</div>
+</div>
+</section>
+
+<section class="section alt" id="contact">
+<div class="container">
+<div class="section-head reveal"><span class="eyebrow">Your Next Step</span><h2>Book Your Appointment</h2><p>Send your preferred details and our team can follow up with you regarding availability.</p><div class="gold-line"></div></div>
+<div class="contact-grid">
+<div class="contact-panel reveal">
+<span class="eyebrow">Contact</span>
+<h2 style="font:600 2rem 'Playfair Display',serif;margin-top:8px">We’re here to help.</h2>
+<div class="contact-list">
+<div class="contact-item"><span class="mini">⌖</span><div><b>Address</b><span>Premium Private Wing, Pakistan</span></div></div>
+<div class="contact-item"><span class="mini">☎</span><div><b>Phone</b><span>+92 21 0000 0000</span></div></div>
+<div class="contact-item"><span class="mini">✉</span><div><b>Email</b><span>privatewing@example.com</span></div></div>
+<div class="contact-item"><span class="mini">◷</span><div><b>Timings</b><span>Appointments: 9:00 AM – 8:00 PM</span></div></div>
+</div>
+<div class="emergency-box"><small>Emergency Support</small><strong>1122</strong></div>
+</div>
+<div class="form-panel reveal">
+<form id="bookingForm">
+<div class="form-grid">
+<div class="field"><label>Name</label><input required type="text" placeholder="Your full name"></div>
+<div class="field"><label>Phone</label><input required type="tel" placeholder="+92 ..."></div>
+<div class="field"><label>Service</label><select required><option value="">Select service</option><option>Cardiology</option><option>Orthopedics</option><option>Gynecology</option><option>Pediatrics</option><option>General Surgery</option><option>Internal Medicine</option></select></div>
+<div class="field"><label>Date</label><input required type="date"></div>
+<div class="field full"><label>Message</label><textarea placeholder="Tell us briefly how we can help"></textarea></div>
+</div>
+<button class="btn btn-gold" type="submit">Submit Appointment Request →</button>
+<p id="formMsg" style="display:none;color:#8de7e1;text-align:center;font-size:.75rem;margin-top:12px">Thank you. Your appointment request has been prepared.</p>
+</form>
+</div>
+</div>
+</div>
+</section>
+</main>
+
+<footer class="footer">
+<div class="container">
+<div class="footer-grid">
+<div><a class="brand" href="#home">AKUH <span>Private Wing</span></a><p style="margin-top:13px;max-width:280px">A premium healthcare concept focused on specialist care, comfort and a patient-first experience.</p><div class="socials"><a href="#contact">f</a><a href="#contact">in</a><a href="#contact">◎</a></div></div>
+<div><h4>Quick Links</h4><a href="#about">About</a><a href="#services">Services</a><a href="#doctors">Doctors</a><a href="#facilities">Facilities</a></div>
+<div><h4>Services</h4><a href="#specialties">Cardiology</a><a href="#specialties">Orthopedics</a><a href="#specialties">Gynecology</a><a href="#specialties">Pediatrics</a></div>
+<div><h4>Contact</h4><p>Pakistan</p><p style="margin-top:8px">+92 21 0000 0000</p><p>privatewing@example.com</p><p style="margin-top:8px">Emergency: 1122</p></div>
+</div>
+<div class="bottom"><span>© 2026 AKUH Private Wing. All rights reserved.</span><span>Premium healthcare website concept • Hostinger-ready structure</span></div>
+</div>
+</footer>
+
+<script>
+const header=document.getElementById('header');
+const menuBtn=document.getElementById('menuBtn');
+const nav=document.getElementById('navlinks');
+window.addEventListener('scroll',()=>header.classList.toggle('scrolled',window.scrollY>30));
+menuBtn.addEventListener('click',()=>nav.classList.toggle('open'));
+document.querySelectorAll('.navlinks a').forEach(a=>a.addEventListener('click',()=>nav.classList.remove('open')));
+
+const observer=new IntersectionObserver(entries=>{
+ entries.forEach(entry=>{if(entry.isIntersecting){entry.target.classList.add('show');observer.unobserve(entry.target)}})
+},{threshold:.12});
+document.querySelectorAll('.reveal').forEach(el=>observer.observe(el));
+
+const form=document.getElementById('bookingForm');
+form.addEventListener('submit',e=>{
+ e.preventDefault();
+ document.getElementById('formMsg').style.display='block';
+ form.reset();
+});
+
+document.querySelectorAll('a[href^="#"]').forEach(link=>{
+ link.addEventListener('click',e=>{
+  const id=link.getAttribute('href');
+  if(id.length>1){const target=document.querySelector(id);if(target){e.preventDefault();target.scrollIntoView({behavior:'smooth',block:'start'})}}
+ })
+});
+</script>
+</body>
+</html>
